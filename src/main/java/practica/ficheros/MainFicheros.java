@@ -1,6 +1,10 @@
 package practica.ficheros;
 
 import java.io.*;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class MainFicheros {
     // 1. Crea un proyecto Java llamado GesƟonFicheros.
@@ -16,17 +20,19 @@ public class MainFicheros {
 
         if (!carpetaDatos.exists()) {
             carpetaDatos.mkdirs();
+            escribirLog(marcaDeTiempoConMensaje("Se ha creado la carpeta de datos en la ruta: " + carpetaDatos.getPath()), archivoLog);
         }
         // 5. Crea dentro de datos un fichero de texto llamado usuarios.txt.
         File archivoDatos;
         try {
             archivoDatos = new File(carpetaDatos.getPath(), "usuarios.txt");
-            archivoDatos.createNewFile();
+            boolean creadoArchivoDatos = archivoDatos.createNewFile();
+            if (creadoArchivoDatos) escribirLog(marcaDeTiempoConMensaje("Se ha creado el archivo de datos de los usuarios en la ruta: " + archivoDatos.getPath()), archivoLog);
             // 6. Comprueba si el fichero usuarios.txt existe, y muestra un mensaje apropiado.
             if (archivoDatos.exists()) {
-                System.out.println("El archivo " + archivoDatos.getName() + " existe.");
+                escribirLog(marcaDeTiempoConMensaje("El archivo " + archivoDatos.getName() + " existe."), archivoLog);
             } else {
-                System.out.println("El archivo " + archivoDatos.getName() + " no existe.");
+                escribirLog(marcaDeTiempoConMensaje("El archivo " + archivoDatos.getName() + " no existe."), archivoLog);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -37,6 +43,7 @@ public class MainFicheros {
             for  (int i = 0; i < usuarios.length; i++) {
                 bw.write(usuarios[i]);
                 bw.newLine();
+                escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -55,10 +62,12 @@ public class MainFicheros {
 
         // 9. Añade dos usuarios más al final del fichero sin sobrescribir el contenido.
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDatos.getPath()))) {
+            escribirLog(marcaDeTiempoConMensaje("Eliminados todos los usuarios del archivo " + archivoDatos.getName() + "."), archivoLog);
             String[] usuarios = {"Ruperto", "Gustavo"};
             for  (int i = 0; i < usuarios.length; i++) {
                 bw.write(usuarios[i]);
                 bw.newLine();
+                escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -84,7 +93,10 @@ public class MainFicheros {
             String linea;
             boolean encontrado = false;
             while ((linea = br.readLine()) != null && !encontrado) {
-                if (linea.contains("Carlos")) encontrado = true;
+                if (linea.contains("Carlos")) {
+                    encontrado = true;
+                    escribirLog(marcaDeTiempoConMensaje("Usuario Carlos encontrado." ), archivoLog);
+                }
             }
 
             if (encontrado) {
@@ -92,7 +104,6 @@ public class MainFicheros {
             } else {
                 System.out.println("No hemos encontrado al usuario Carlos.");
             }
-            System.out.println("");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -105,9 +116,11 @@ public class MainFicheros {
         BufferedWriter bw = new BufferedWriter(new FileWriter(archivoBackup))) {
             String linea;
             StringBuilder texto = new StringBuilder();
+            escribirLog(marcaDeTiempoConMensaje("Leyendo datos del archivo " + archivoDatos.getName() + "."), archivoLog);
             while ((linea = br.readLine()) != null) {
                 texto.append(linea);
             }
+            escribirLog(marcaDeTiempoConMensaje("Escribiendo el contenido del archivo " + archivoDatos.getName() + " al archivo " + archivoBackup.getName() + "."), archivoLog);
             bw.write(String.valueOf(texto));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -118,8 +131,12 @@ public class MainFicheros {
         // 13. Renombra el fichero usuarios_copia.txt a usuarios_backup.txt.
         File archivoBackupRenombrado = new File(carpetaDatos, "usuarios_backup.txt");
         boolean renombrado = archivoBackup.renameTo(archivoBackupRenombrado);
-        if (renombrado) System.out.println("Archivo renombrado correctamente.");
+        if (renombrado) {
+            System.out.println("Archivo renombrado correctamente.");
+            escribirLog(marcaDeTiempoConMensaje("Se ha renombrado el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        }
         else System.out.println("No se ha podido renombrar el archivo.");
+        escribirLog(marcaDeTiempoConMensaje("No se ha podido renombrar el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
 
 
 
@@ -133,5 +150,14 @@ public class MainFicheros {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private static String marcaDeTiempoConMensaje(String mensaje) {
+        StringBuilder mensajeFinal = new StringBuilder();
+        LocalDateTime fecha = LocalDateTime.now();
+        mensajeFinal.append(fecha);
+        mensajeFinal.append(" - ");
+        mensajeFinal.append(mensaje);
+        return "";
     }
 }
