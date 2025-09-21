@@ -115,3 +115,19 @@
 2025-09-21 14:27:29:18609200 - Se ha eliminado el archivo usuarios_backup.txt.
 2025-09-21 14:27:29:20611600 - Carpeta reportesexiste.
 2025-09-21 14:27:29:23610300 - Mostrando archivos de la carpeta datos.
+2025-09-21 14:31:01:361167900 - El archivo usuarios.txt existe.
+2025-09-21 14:31:01:386247800 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:387825300 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:387825300 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:389330200 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:389330200 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:395625300 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21 14:31:01:395625300 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:396625100 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:31:01:405150700 - Leyendo datos del archivo usuarios.txt.
+2025-09-21 14:31:01:406153100 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21 14:31:01:409153900 - Se ha renombrado el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21 14:31:01:410155000 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-21 14:31:01:412154800 - Carpeta reportesexiste.
+2025-09-21 14:31:01:413154700 - Mostrando archivos de la carpeta datos.
+2025-09-21 14:31:01:414657900 - Mostrando ruta absoluta del archivo usuarios.txt.

@@ -1,12 +1,8 @@
 package practica.ficheros;
 
 import java.io.*;
-import java.security.Timestamp;
-import java.sql.Time;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.Date;
 
 public class MainFicheros {
     // 1. Crea un proyecto Java llamado GesƟonFicheros.
@@ -82,7 +78,7 @@ public class MainFicheros {
             while ((linea = br.readLine()) != null) {
                 contador++;
             }
-            System.out.println("Hay " + contador + " líneas.");
+            System.out.println("\nHay " + contador + " líneas.");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -102,9 +98,9 @@ public class MainFicheros {
             }
 
             if (encontrado) {
-                System.out.println("Hemos encontrado al usuario Carlos.");
+                System.out.println("\nHemos encontrado al usuario Carlos.");
             } else {
-                System.out.println("No hemos encontrado al usuario Carlos.");
+                System.out.println("\nNo hemos encontrado al usuario Carlos.");
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -164,6 +160,10 @@ public class MainFicheros {
         for (int i = 0; i < archivos.length; i++) {
             System.out.println(archivos[i].getName());
         }
+
+        // 19. Muestra la ruta absoluta del fichero usuarios.txt.
+        escribirLog(marcaDeTiempoConMensaje("\nMostrando ruta absoluta del archivo " + archivoDatos.getName() + "."), archivoLog);
+        System.out.println(archivoDatos.getAbsolutePath());
 
 
 
