@@ -21,9 +21,8 @@ public class MainFicheros {
             escribirLog(marcaDeTiempoConMensaje("Se ha creado la carpeta de datos en la ruta: " + carpetaDatos.getPath()), archivoLog);
         }
         // 5. Crea dentro de datos un fichero de texto llamado usuarios.txt.
-        File archivoDatos;
+        File archivoDatos = new File(carpetaDatos.getPath(), "usuarios.txt");
         try {
-            archivoDatos = new File(carpetaDatos.getPath(), "usuarios.txt");
             boolean creadoArchivoDatos = archivoDatos.createNewFile();
             if (creadoArchivoDatos) escribirLog(marcaDeTiempoConMensaje("Se ha creado el archivo de datos de los usuarios en la ruta: " + archivoDatos.getPath()), archivoLog);
             // 6. Comprueba si el fichero usuarios.txt existe, y muestra un mensaje apropiado.
@@ -33,7 +32,7 @@ public class MainFicheros {
                 escribirLog(marcaDeTiempoConMensaje("El archivo " + archivoDatos.getName() + " no existe."), archivoLog);
             }
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la creación del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
         // 7. Escribe en usuarios.txt los nombres de 5 usuarios (uno por línea).
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDatos.getPath()))) {
@@ -44,7 +43,7 @@ public class MainFicheros {
                 escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la creacioón del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
         // 8. Lee y muestra por pantalla el contenido de usuarios.txt.
         try (BufferedReader br = new BufferedReader(new FileReader(archivoDatos.getPath()))) {
@@ -52,10 +51,8 @@ public class MainFicheros {
             while ((linea = br.readLine()) != null) {
                 System.out.println(linea);
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la lectura del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
 
         // 9. Añade dos usuarios más al final del fichero sin sobrescribir el contenido.
@@ -67,8 +64,8 @@ public class MainFicheros {
                 bw.newLine();
                 escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la escritura del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
 
         // 10. Muestra el número total de líneas (usuarios) en el fichero.
@@ -79,10 +76,8 @@ public class MainFicheros {
                 contador++;
             }
             System.out.println("\nHay " + contador + " líneas.");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la lectura del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
 
         // 11. Busca en el fichero si existe un usuario llamado "Carlos". Muestra un mensaje según se
@@ -102,10 +97,8 @@ public class MainFicheros {
             } else {
                 System.out.println("\nNo hemos encontrado al usuario Carlos.");
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la lectura del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
 
         // 12. Copia el fichero usuarios.txt en un nuevo fichero usuarios_copia.txt.
@@ -120,10 +113,8 @@ public class MainFicheros {
             }
             escribirLog(marcaDeTiempoConMensaje("Escribiendo el contenido del archivo " + archivoDatos.getName() + " al archivo " + archivoBackup.getName() + "."), archivoLog);
             bw.write(String.valueOf(texto));
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            escribirLog(marcaDeTiempoConMensaje("Ha habido un error durante la copia del archivo " + archivoDatos.getName() + "."), archivoLog);
         }
 
         // 13. Renombra el fichero usuarios_copia.txt a usuarios_backup.txt.
@@ -132,8 +123,7 @@ public class MainFicheros {
         if (renombrado) {
             System.out.println("Archivo renombrado correctamente.");
             escribirLog(marcaDeTiempoConMensaje("Se ha renombrado el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
-        }
-        else {
+        } else {
             System.out.println("No se ha podido renombrar el archivo.");
             escribirLog(marcaDeTiempoConMensaje("No se ha podido renombrar el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
         }
@@ -175,8 +165,9 @@ public class MainFicheros {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoLog.getPath(),true))) {
             bw.write(contenido);
             bw.newLine();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            System.out.println("Hubo un fallo en el método de escritura del archivo log.");
+            System.out.println(e);
         }
     }
 
