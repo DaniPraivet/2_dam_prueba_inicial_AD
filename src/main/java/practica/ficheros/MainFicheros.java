@@ -142,6 +142,10 @@ public class MainFicheros {
             escribirLog(marcaDeTiempoConMensaje("No se ha podido renombrar el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
         }
 
+        // 16. Llama al método anterior para borrar usuarios_backup.txt.
+        if (borrarArchivo(archivoBackupRenombrado)) escribirLog(marcaDeTiempoConMensaje("Se ha eliminado el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        else escribirLog(marcaDeTiempoConMensaje("No se ha podido eliminar el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
+
 
 
 
@@ -167,6 +171,7 @@ public class MainFicheros {
         return mensajeFinal.toString();
     }
 
+    // 15. Implementa un método que borre un fichero cuyo nombre se pase como parámetro.
     private static boolean borrarArchivo(File archivoABorrar) {
         return archivoABorrar.delete();
     }
