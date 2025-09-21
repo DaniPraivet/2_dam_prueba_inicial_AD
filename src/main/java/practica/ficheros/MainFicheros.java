@@ -163,4 +163,8 @@ public class MainFicheros {
         mensajeFinal.append(mensaje);
         return mensajeFinal.toString();
     }
+
+    private static boolean borrarArchivo(File archivoABorrar) {
+        return archivoABorrar.delete();
+    }
 }
