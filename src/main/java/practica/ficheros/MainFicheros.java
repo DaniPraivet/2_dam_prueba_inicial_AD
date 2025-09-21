@@ -157,6 +157,14 @@ public class MainFicheros {
             }
         } else escribirLog(marcaDeTiempoConMensaje("Carpeta " + carpetaReportes.getName()) + "existe.", archivoLog);
 
+        // 18. Muestra la lista de todos los ficheros de la carpeta datos.
+        File[] archivos = carpetaDatos.listFiles();
+        System.out.println("\nArchivos de la carpeta " + carpetaDatos.getName() +":");
+        escribirLog(marcaDeTiempoConMensaje("Mostrando archivos de la carpeta " + carpetaDatos.getName() + "."), archivoLog);
+        for (int i = 0; i < archivos.length; i++) {
+            System.out.println(archivos[i].getName());
+        }
+
 
 
 
