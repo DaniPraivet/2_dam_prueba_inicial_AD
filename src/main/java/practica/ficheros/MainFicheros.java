@@ -137,8 +137,11 @@ public class MainFicheros {
             System.out.println("Archivo renombrado correctamente.");
             escribirLog(marcaDeTiempoConMensaje("Se ha renombrado el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
         }
-        else System.out.println("No se ha podido renombrar el archivo.");
-        escribirLog(marcaDeTiempoConMensaje("No se ha podido renombrar el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        else {
+            System.out.println("No se ha podido renombrar el archivo.");
+            escribirLog(marcaDeTiempoConMensaje("No se ha podido renombrar el archivo " + archivoBackup.getName() + " a " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        }
+
 
 
 
