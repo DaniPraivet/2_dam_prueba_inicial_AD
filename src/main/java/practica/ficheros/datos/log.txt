@@ -1,0 +1,60 @@
+2025-09-21T13:03:04.169405800 - El archivo usuarios.txt existe.
+2025-09-21T13:03:04.180046300 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.181096100 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.181096100 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.181096100 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.182213400 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.191157600 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21T13:03:04.191157600 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.192157500 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:03:04.196523600 - Leyendo datos del archivo usuarios.txt.
+2025-09-21T13:03:04.196523600 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21T13:03:04.198437400 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21T13:35:23.788977500 - El archivo usuarios.txt existe.
+2025-09-21T13:35:23.801604800 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.802607300 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.802607300 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.803607800 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.803607800 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.806453500 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21T13:35:23.807627600 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.807627600 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21T13:35:23.814247300 - Leyendo datos del archivo usuarios.txt.
+2025-09-21T13:35:23.814247300 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21T13:35:23.816196900 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21 13:36:28 - El archivo usuarios.txt existe.
+2025-09-21 13:36:28 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21 13:36:28 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:28 - Leyendo datos del archivo usuarios.txt.
+2025-09-21 13:36:28 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21 13:36:28 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21 13:36:49:535294400 - El archivo usuarios.txt existe.
+2025-09-21 13:36:49:549791900 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:549791900 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:550849000 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:550849000 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:550849000 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:554280700 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21 13:36:49:555786200 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:556790400 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:36:49:564299300 - Leyendo datos del archivo usuarios.txt.
+2025-09-21 13:36:49:565299000 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21 13:36:49:566802900 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21 13:37:05:968864200 - El archivo usuarios.txt existe.
+2025-09-21 13:37:05:981463800 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:981463800 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:982996600 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:982996600 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:982996600 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:986309100 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21 13:37:05:986309100 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:987313900 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 13:37:05:993288800 - Leyendo datos del archivo usuarios.txt.
+2025-09-21 13:37:05:994307200 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21 13:37:05:995306200 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.

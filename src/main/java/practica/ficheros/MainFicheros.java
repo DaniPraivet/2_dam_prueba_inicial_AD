@@ -1,9 +1,11 @@
 package practica.ficheros;
 
 import java.io.*;
+import java.security.Timestamp;
 import java.sql.Time;
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Date;
 
 public class MainFicheros {
@@ -155,9 +157,10 @@ public class MainFicheros {
     private static String marcaDeTiempoConMensaje(String mensaje) {
         StringBuilder mensajeFinal = new StringBuilder();
         LocalDateTime fecha = LocalDateTime.now();
-        mensajeFinal.append(fecha);
+        DateTimeFormatter fechaFormateada = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:n");
+        mensajeFinal.append(fecha.format(fechaFormateada));
         mensajeFinal.append(" - ");
         mensajeFinal.append(mensaje);
-        return "";
+        return mensajeFinal.toString();
     }
 }
