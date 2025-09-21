@@ -146,6 +146,17 @@ public class MainFicheros {
         if (borrarArchivo(archivoBackupRenombrado)) escribirLog(marcaDeTiempoConMensaje("Se ha eliminado el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
         else escribirLog(marcaDeTiempoConMensaje("No se ha podido eliminar el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
 
+        // 17. Crea un objeto File que represente un directorio reportes. Si no existe, créalo.
+        File carpetaReportes = new File("src/main/java/practica/ficheros/reportes");
+        if (!carpetaReportes.exists()) {
+            escribirLog(marcaDeTiempoConMensaje("Carpeta " + carpetaReportes.getName()) + "no existe.", archivoLog);
+            if (carpetaReportes.mkdirs()) {
+                escribirLog(marcaDeTiempoConMensaje("Carpeta " + carpetaReportes.getName()) + "creada correctamente.", archivoLog);
+            } else {
+                escribirLog(marcaDeTiempoConMensaje("No se ha podido crear la carpeta " + carpetaReportes.getName()) + " correctamente.", archivoLog);
+            }
+        } else escribirLog(marcaDeTiempoConMensaje("Carpeta " + carpetaReportes.getName()) + "existe.", archivoLog);
+
 
 
 

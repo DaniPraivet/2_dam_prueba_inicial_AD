@@ -71,3 +71,18 @@
 2025-09-21 13:52:27:482747700 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
 2025-09-21 13:52:27:482747700 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
 2025-09-21 13:52:27:484195500 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-21 14:21:57:677733900 - El archivo usuarios.txt existe.
+2025-09-21 14:21:57:700852600 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:701878800 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:701878800 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:702904800 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:703891200 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:707898900 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-21 14:21:57:709365600 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:710432700 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-21 14:21:57:720295100 - Leyendo datos del archivo usuarios.txt.
+2025-09-21 14:21:57:721294900 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-21 14:21:57:724501900 - Se ha renombrado el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-21 14:21:57:725510600 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-21 14:21:57:727644700 - Carpeta reportesno existe.
+2025-09-21 14:21:57:729082800 - Carpeta reportescreada correctamente.
