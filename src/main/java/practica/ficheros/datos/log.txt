@@ -131,3 +131,56 @@
 2025-09-21 14:31:01:412154800 - Carpeta reportesexiste.
 2025-09-21 14:31:01:413154700 - Mostrando archivos de la carpeta datos.
 2025-09-21 14:31:01:414657900 - Mostrando ruta absoluta del archivo usuarios.txt.
+2025-09-22 17:03:48:40130200 - El archivo usuarios.txt existe.
+2025-09-22 17:03:48:46114000 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:46114000 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:46114000 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:47111400 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:47111400 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:48108700 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-22 17:03:48:49106400 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:49106400 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:03:48:51100800 - Leyendo datos del archivo usuarios.txt.
+2025-09-22 17:03:48:51100800 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-22 17:03:48:53097500 - No se ha podido renombrar el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-22 17:03:48:54094600 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-22 17:03:48:54094600 - Carpeta reportesno existe.
+2025-09-22 17:03:48:55092200 - Carpeta reportescreada correctamente.
+2025-09-22 17:03:48:56088500 - Mostrando archivos de la carpeta datos.
+2025-09-22 17:03:48:56088500 - 
+Mostrando ruta absoluta del archivo usuarios.txt.
+2025-09-22 17:19:43:195908400 - El archivo usuarios.txt existe.
+2025-09-22 17:19:43:202890000 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:202890000 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:202890000 - Usuario Jorgito agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:203887200 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:203887200 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:204908700 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-22 17:19:43:205908100 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:205908100 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:19:43:207903000 - Leyendo datos del archivo usuarios.txt.
+2025-09-22 17:19:43:207903000 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-22 17:19:43:209897500 - Se ha renombrado el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-22 17:19:43:209897500 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-22 17:19:43:210894900 - Carpeta reportesexiste.
+2025-09-22 17:19:43:211893900 - Mostrando archivos de la carpeta datos.
+2025-09-22 17:19:43:212890300 - 
+Mostrando ruta absoluta del archivo usuarios.txt.
+2025-09-22 17:20:06:22913200 - El archivo usuarios.txt existe.
+2025-09-22 17:20:06:30894700 - Usuario Jepeto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:31890100 - Usuario Mamerto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:31890100 - Usuario Carlos agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:32886500 - Usuario Jaimito agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:32886500 - Usuario Gerardo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:33883300 - Eliminados todos los usuarios del archivo usuarios.txt.
+2025-09-22 17:20:06:34880300 - Usuario Ruperto agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:34880300 - Usuario Gustavo agregado al archivo de usuarios usuarios.txt.
+2025-09-22 17:20:06:36874700 - Usuario Carlos encontrado.
+2025-09-22 17:20:06:36874700 - Leyendo datos del archivo usuarios.txt.
+2025-09-22 17:20:06:37872200 - Escribiendo el contenido del archivo usuarios.txt al archivo usuarios_copia.txt.
+2025-09-22 17:20:06:38869500 - Se ha renombrado el archivo usuarios_copia.txt a usuarios_backup.txt.
+2025-09-22 17:20:06:39866900 - Se ha eliminado el archivo usuarios_backup.txt.
+2025-09-22 17:20:06:40864100 - Carpeta reportesexiste.
+2025-09-22 17:20:06:41861300 - Mostrando archivos de la carpeta datos.
+2025-09-22 17:20:06:42858700 - 
+Mostrando ruta absoluta del archivo usuarios.txt.

@@ -24,7 +24,8 @@ public class MainFicheros {
         File archivoDatos = new File(carpetaDatos.getPath(), "usuarios.txt");
         try {
             boolean creadoArchivoDatos = archivoDatos.createNewFile();
-            if (creadoArchivoDatos) escribirLog(marcaDeTiempoConMensaje("Se ha creado el archivo de datos de los usuarios en la ruta: " + archivoDatos.getPath()), archivoLog);
+            if (creadoArchivoDatos)
+                escribirLog(marcaDeTiempoConMensaje("Se ha creado el archivo de datos de los usuarios en la ruta: " + archivoDatos.getPath()), archivoLog);
             // 6. Comprueba si el fichero usuarios.txt existe, y muestra un mensaje apropiado.
             if (archivoDatos.exists()) {
                 escribirLog(marcaDeTiempoConMensaje("El archivo " + archivoDatos.getName() + " existe."), archivoLog);
@@ -36,8 +37,8 @@ public class MainFicheros {
         }
         // 7. Escribe en usuarios.txt los nombres de 5 usuarios (uno por línea).
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDatos.getPath()))) {
-            String[] usuarios = {"Jepeto", "Mamerto", "Jorgito", "Jaimito", "Gerardo"};
-            for  (int i = 0; i < usuarios.length; i++) {
+            String[] usuarios = {"Jepeto", "Mamerto", "Carlos", "Jaimito", "Gerardo"};
+            for (int i = 0; i < usuarios.length; i++) {
                 bw.write(usuarios[i]);
                 bw.newLine();
                 escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
@@ -56,10 +57,10 @@ public class MainFicheros {
         }
 
         // 9. Añade dos usuarios más al final del fichero sin sobrescribir el contenido.
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDatos.getPath()))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDatos.getPath(), true))) {
             escribirLog(marcaDeTiempoConMensaje("Eliminados todos los usuarios del archivo " + archivoDatos.getName() + "."), archivoLog);
             String[] usuarios = {"Ruperto", "Gustavo"};
-            for  (int i = 0; i < usuarios.length; i++) {
+            for (int i = 0; i < usuarios.length; i++) {
                 bw.write(usuarios[i]);
                 bw.newLine();
                 escribirLog(marcaDeTiempoConMensaje("Usuario " + usuarios[i] + " agregado al archivo de usuarios " + archivoDatos.getName() + "."), archivoLog);
@@ -88,7 +89,7 @@ public class MainFicheros {
             while ((linea = br.readLine()) != null && !encontrado) {
                 if (linea.contains("Carlos")) {
                     encontrado = true;
-                    escribirLog(marcaDeTiempoConMensaje("Usuario Carlos encontrado." ), archivoLog);
+                    escribirLog(marcaDeTiempoConMensaje("Usuario Carlos encontrado."), archivoLog);
                 }
             }
 
@@ -104,7 +105,7 @@ public class MainFicheros {
         // 12. Copia el fichero usuarios.txt en un nuevo fichero usuarios_copia.txt.
         File archivoBackup = new File(carpetaDatos, "usuarios_copia.txt");
         try (BufferedReader br = new BufferedReader(new FileReader(archivoDatos.getPath()));
-        BufferedWriter bw = new BufferedWriter(new FileWriter(archivoBackup))) {
+             BufferedWriter bw = new BufferedWriter(new FileWriter(archivoBackup))) {
             String linea;
             StringBuilder texto = new StringBuilder();
             escribirLog(marcaDeTiempoConMensaje("Leyendo datos del archivo " + archivoDatos.getName() + "."), archivoLog);
@@ -129,8 +130,10 @@ public class MainFicheros {
         }
 
         // 16. Llama al método anterior para borrar usuarios_backup.txt.
-        if (borrarArchivo(archivoBackupRenombrado)) escribirLog(marcaDeTiempoConMensaje("Se ha eliminado el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
-        else escribirLog(marcaDeTiempoConMensaje("No se ha podido eliminar el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        if (borrarArchivo(archivoBackupRenombrado))
+            escribirLog(marcaDeTiempoConMensaje("Se ha eliminado el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
+        else
+            escribirLog(marcaDeTiempoConMensaje("No se ha podido eliminar el archivo " + archivoBackupRenombrado.getName() + "."), archivoLog);
 
         // 17. Crea un objeto File que represente un directorio reportes. Si no existe, créalo.
         File carpetaReportes = new File("src/main/java/practica/ficheros/reportes");
@@ -145,7 +148,7 @@ public class MainFicheros {
 
         // 18. Muestra la lista de todos los ficheros de la carpeta datos.
         File[] archivos = carpetaDatos.listFiles();
-        System.out.println("\nArchivos de la carpeta " + carpetaDatos.getName() +":");
+        System.out.println("\nArchivos de la carpeta " + carpetaDatos.getName() + ":");
         escribirLog(marcaDeTiempoConMensaje("Mostrando archivos de la carpeta " + carpetaDatos.getName() + "."), archivoLog);
         for (int i = 0; i < archivos.length; i++) {
             System.out.println(archivos[i].getName());
@@ -156,13 +159,12 @@ public class MainFicheros {
         System.out.println(archivoDatos.getAbsolutePath());
 
 
-
-
     }
+
     // 14. Crea un fichero log.txt en la carpeta datos y escribe un registro con la fecha y hora de
     //cada operación realizada.
     private static void escribirLog(String contenido, File archivoLog) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoLog.getPath(),true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(archivoLog.getPath(), true))) {
             bw.write(contenido);
             bw.newLine();
         } catch (IOException e) {
